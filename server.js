@@ -1,6 +1,9 @@
 var http = require('http');
   var express = require('express');
   var app = express();
+  var bodyParser = require("body-parser");
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({entended:true}));
   var server = http.Server(app);
   
   
@@ -10,6 +13,14 @@ var http = require('http');
   
   app.get('/about', function(req, res){
     res.sendFile(__dirname+'/about.html');
+  });
+  
+  app.get('/form', function(req, res){
+    res.sendFile(__dirname+'/form.html');
+  });
+  
+  app.post('/form', function(req, res){
+    console.log(req.body);
   });
   
   server.listen(process.env.PORT, process.env.IP, function(){
