@@ -22,6 +22,7 @@
   "homepage": "https://github.com/akash1521439/classwork5#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "mongodb": "^3.1.1"
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.5"
   }
 }
